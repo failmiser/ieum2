@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Send /api/chat to the serverless function that holds the API key.
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
+
+# Single-page app: unknown paths fall back to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
