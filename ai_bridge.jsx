@@ -47,7 +47,6 @@ async function ieumAskAI(messages) {
   // 3) Nothing available
   throw new Error('NO_AI_BACKEND');
 }
-
 // Turn whatever the model said into { native, korean }.
 // Tolerates stray text, markdown fences, or a plain string.
 function ieumParseBilingual(reply) {
@@ -75,5 +74,4 @@ function ieumParseBilingual(reply) {
   // Last resort: show something rather than nothing
   return { native: text.slice(0, 120), korean: '' };
 }
-
 Object.assign(window, { ieumAskAI, ieumParseBilingual });
