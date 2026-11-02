@@ -74,7 +74,6 @@ function MatchResult({ match, onAccept, onSkip, langCode = 'ko' }) {
     </div>
   );
 }
-
 // ─── Video Call (Omegle style) with real AI chat ─────
 function VideoCallScreen({ match, onEnd, langCode = 'ko' }) {
   const T = (k) => tt(langCode, k);
@@ -427,7 +426,6 @@ function VideoCallScreen({ match, onEnd, langCode = 'ko' }) {
     </div>
   );
 }
-
 // ─── Chat bubble ──────────────────────────────────
 function ChatBubble({ msg, country }) {
   const mine = msg.from === 'me';
@@ -457,7 +455,6 @@ function ChatBubble({ msg, country }) {
     </div>
   );
 }
-
 // ─── Friends drawer (slides in from RIGHT, viewport-fixed) ────────
 function FriendsDrawer({ open, onClose, onSelect, onStartMatch, langCode = 'ko' }) {
   const T = (k) => tt(langCode, k);
@@ -585,5 +582,4 @@ function FriendsDrawer({ open, onClose, onSelect, onStartMatch, langCode = 'ko' 
     </>
   );
 }
-
 Object.assign(window, { MatchResult, VideoCallScreen, FriendsDrawer, ChatBubble });
